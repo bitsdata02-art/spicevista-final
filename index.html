@@ -491,6 +491,14 @@ ul { list-style: none; }
   text-align: center;
   margin-bottom: 64px;
 }
+.infra-header .section-sub {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: min(36rem, 100%);
+  text-wrap: balance;
+  padding: 0 8px;
+  box-sizing: border-box;
+}
 .infra-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -973,6 +981,11 @@ ul { list-style: none; }
 .contact-icon-box svg {
   width: 22px; height: 22px;
 }
+.contact-icon-box--whatsapp {
+  background: rgba(37, 211, 102, 0.12);
+  border: 1px solid rgba(37, 211, 102, 0.2);
+  color: #25d366;
+}
 .contact-card-kicker {
   font-family: var(--ff-head);
   font-size: 0.72rem;
@@ -1159,144 +1172,143 @@ footer {
 }
 
 /* =============================================
-   PURELAL FAMILY (within About)
+   PURELAL FAMILY (within Contact)
    ============================================= */
-#about .about-family-block {
-  margin-top: 44px;
-  padding-top: 36px;
-  border-top: 1px solid rgba(139, 0, 0, 0.14);
+#contact .contact-ecosystem-line {
+  margin-top: 14px;
+  max-width: 36rem;
 }
-#about .about-family-head {
-  margin-bottom: 22px;
-  max-width: 52rem;
+#contact .contact-family-block {
+  margin-top: 56px;
+  padding-top: 44px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
-#about .about-family-head .section-label {
-  margin-bottom: 8px;
+#contact .contact-family-head {
+  margin-bottom: 24px;
+  max-width: 40rem;
+}
+#contact .contact-family-head .section-label {
+  margin-bottom: 10px;
   font-size: 0.82rem;
 }
-#about .about-family-intro {
-  font-size: 1.02rem;
-  color: #5a5a5a;
+#contact .contact-family-intro {
+  font-size: 0.98rem;
+  color: rgba(255, 255, 255, 0.52);
   line-height: 1.55;
   margin: 0;
 }
-#about .family-grid {
+#contact .family-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 22px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
 }
-#about .family-card {
+#contact .family-card {
   position: relative;
   border-radius: 10px;
   overflow: hidden;
-  background: linear-gradient(165deg, #ffffff 0%, #faf8f5 48%, #ffffff 100%);
-  border: 1px solid rgba(139, 0, 0, 0.1);
-  box-shadow:
-    0 1px 0 rgba(255, 255, 255, 0.9) inset,
-    0 8px 32px rgba(45, 20, 10, 0.07),
-    0 2px 8px rgba(0, 0, 0, 0.04);
-  transition: transform var(--transition), box-shadow var(--transition);
+  background: #3a2618;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.22);
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
 }
-#about .family-card:hover {
+#contact .family-card:hover {
   transform: translateY(-3px);
-  box-shadow:
-    0 1px 0 rgba(255, 255, 255, 0.95) inset,
-    0 16px 40px rgba(90, 0, 0, 0.1),
-    0 4px 12px rgba(0, 0, 0, 0.06);
+  border-color: rgba(212, 165, 116, 0.25);
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.28);
 }
-#about .family-card-sheen {
-  height: 5px;
+#contact .family-card-sheen {
+  height: 4px;
   background: linear-gradient(90deg, var(--crimson), var(--ember));
 }
-#about .family-card--ho .family-card-sheen {
+#contact .family-card--ho .family-card-sheen {
   background: linear-gradient(90deg, #a67c2d, var(--gold), #c9a85c);
 }
-#about .family-card--bihar .family-card-sheen {
+#contact .family-card--bihar .family-card-sheen {
   background: linear-gradient(90deg, #5a4030, var(--ember));
 }
-#about .family-card-inner {
+#contact .family-card-inner {
   display: flex;
-  gap: 18px;
-  padding: 22px 22px 24px;
+  gap: 16px;
+  padding: 20px 20px 22px;
   align-items: flex-start;
 }
-#about .family-card-icon {
-  flex: 0 0 54px;
-  width: 54px;
-  height: 54px;
-  border-radius: 12px;
+#contact .family-card-icon {
+  flex: 0 0 50px;
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(145deg, rgba(211, 84, 0, 0.18), rgba(139, 0, 0, 0.12));
-  border: 1px solid rgba(211, 84, 0, 0.25);
-  color: var(--crimson);
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: var(--gold);
 }
-#about .family-card--ho .family-card-icon {
-  background: linear-gradient(145deg, rgba(201, 168, 76, 0.35), rgba(139, 0, 0, 0.12));
-  border-color: rgba(201, 168, 76, 0.45);
-  color: #7a5a12;
+#contact .family-card--ho .family-card-icon {
+  color: #d4b87a;
+  border-color: rgba(201, 168, 92, 0.35);
+  background: rgba(201, 168, 92, 0.12);
 }
-#about .family-card-icon svg {
-  width: 26px;
-  height: 26px;
+#contact .family-card-icon svg {
+  width: 24px;
+  height: 24px;
   display: block;
 }
-#about .family-card-body {
+#contact .family-card-body {
   flex: 1;
   min-width: 0;
 }
-#about .family-card-region {
+#contact .family-card-region {
   font-family: var(--ff-head);
-  font-size: 0.7rem;
+  font-size: 0.68rem;
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--ember);
   margin: 0 0 6px;
 }
-#about .family-card--ho .family-card-region {
-  color: #9a7b2e;
+#contact .family-card--ho .family-card-region {
+  color: #c9a85c;
 }
-#about .family-card-name {
+#contact .family-card-name {
   font-family: var(--ff-head);
-  font-size: 1.12rem;
+  font-size: 1.05rem;
   font-weight: 800;
   letter-spacing: 0.02em;
-  color: var(--ash);
-  margin: 0 0 12px;
+  color: var(--white);
+  margin: 0 0 10px;
   line-height: 1.25;
 }
-#about .family-card-tags {
+#contact .family-card-tags {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin-bottom: 14px;
+  margin-bottom: 12px;
 }
-#about .family-card-badge {
+#contact .family-card-badge {
   display: inline-block;
   font-family: var(--ff-head);
-  font-size: 0.65rem;
+  font-size: 0.62rem;
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--crimson);
-  background: rgba(139, 0, 0, 0.09);
-  padding: 5px 11px;
+  color: rgba(255, 255, 255, 0.85);
+  background: rgba(0, 0, 0, 0.25);
+  padding: 5px 10px;
   border-radius: 3px;
-  border: 1px solid rgba(139, 0, 0, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
-#about .family-card--ho .family-card-badge {
-  color: #6b4e0a;
-  background: rgba(201, 168, 76, 0.2);
-  border-color: rgba(201, 168, 76, 0.35);
+#contact .family-card--ho .family-card-badge {
+  color: #e8d5a8;
+  background: rgba(201, 168, 92, 0.15);
+  border-color: rgba(201, 168, 92, 0.3);
 }
-#about .family-card-address {
-  font-size: 0.93rem;
-  color: #555;
-  line-height: 1.65;
-  padding-top: 4px;
-  border-top: 1px dashed rgba(0, 0, 0, 0.08);
+#contact .family-card-address {
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.6;
+  padding-top: 8px;
+  border-top: 1px dashed rgba(255, 255, 255, 0.12);
 }
 
 /* =============================================
@@ -1326,6 +1338,7 @@ footer {
   .gallery-item.large { grid-column: span 1; grid-row: span 1; }
   .process-flow { flex-direction: column; gap: 32px; }
   .process-arrow { transform: rotate(90deg); margin-top: 0; }
+  #contact .family-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 @media (max-width: 768px) {
@@ -1348,7 +1361,7 @@ footer {
   .variant-cards { flex-direction: column; }
   .process-step { padding: 0; }
   .gallery-grid { grid-template-columns: 1fr 1fr; }
-  #about .family-grid { grid-template-columns: 1fr; }
+  #contact .family-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 480px) {
@@ -1356,14 +1369,14 @@ footer {
   .btn { text-align: center; }
   .spec-row { gap: 16px; }
   .about-highlights { grid-template-columns: 1fr; }
-  #about .family-card-inner {
+  #contact .family-card-inner {
     flex-direction: column;
     align-items: center;
     text-align: center;
   }
-  #about .family-card-icon { margin-bottom: 4px; }
-  #about .family-card-body { text-align: center; }
-  #about .family-card-tags { justify-content: center; }
+  #contact .family-card-icon { margin-bottom: 4px; }
+  #contact .family-card-body { text-align: center; }
+  #contact .family-card-tags { justify-content: center; }
   .footer-bottom { flex-direction: column; text-align: center; }
 }
 </style>
@@ -1489,83 +1502,6 @@ footer {
             <span>Custom Processing</span>
           </div>
         </div>
-      </div>
-    </div>
-    <div class="about-family-block fade-up">
-      <div class="about-family-head">
-        <span class="section-label">Purelal Family</span>
-        <p class="about-family-intro">Integrated presence across Uttar Pradesh and Bihar — head office, retail, and mandi operations under one trusted ecosystem.</p>
-      </div>
-      <div class="family-grid">
-        <article class="family-card family-card--ho fade-up fade-up-delay-1">
-          <div class="family-card-sheen" aria-hidden="true"></div>
-          <div class="family-card-inner">
-            <div class="family-card-icon" aria-hidden="true">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/><path d="M10 18h4"/></svg>
-            </div>
-            <div class="family-card-body">
-              <p class="family-card-region">Uttar Pradesh · Bareilly</p>
-              <h3 class="family-card-name">SpiceVista Corporation (H.O)</h3>
-              <div class="family-card-tags"><span class="family-card-badge">Head Office</span></div>
-              <div class="family-card-address">
-                Gata 95, 96 &amp; 97<br />
-                Karanpur, Ilaka Shankarpur<br />
-                Tehsil Faridpur, Bareilly · 243123
-              </div>
-            </div>
-          </div>
-        </article>
-        <article class="family-card fade-up fade-up-delay-2">
-          <div class="family-card-sheen" aria-hidden="true"></div>
-          <div class="family-card-inner">
-            <div class="family-card-icon" aria-hidden="true">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-            </div>
-            <div class="family-card-body">
-              <p class="family-card-region">Uttar Pradesh · Retail</p>
-              <h3 class="family-card-name">Purelal Spices</h3>
-              <div class="family-card-tags"><span class="family-card-badge">Shyamganj</span></div>
-              <div class="family-card-address">
-                Mirchi Wali Gali, Shyamganj<br />
-                Bareilly — 243001
-              </div>
-            </div>
-          </div>
-        </article>
-        <article class="family-card family-card--bihar fade-up fade-up-delay-1">
-          <div class="family-card-sheen" aria-hidden="true"></div>
-          <div class="family-card-inner">
-            <div class="family-card-icon" aria-hidden="true">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
-            </div>
-            <div class="family-card-body">
-              <p class="family-card-region">Bihar · Samastipur</p>
-              <h3 class="family-card-name">AK Enterprises</h3>
-              <div class="family-card-tags"><span class="family-card-badge">Bazar Samiti</span></div>
-              <div class="family-card-address">
-                SG 50 &amp; 52, Bazar Samiti<br />
-                Samastipur — 848101
-              </div>
-            </div>
-          </div>
-        </article>
-        <article class="family-card family-card--bihar fade-up fade-up-delay-2">
-          <div class="family-card-sheen" aria-hidden="true"></div>
-          <div class="family-card-inner">
-            <div class="family-card-icon" aria-hidden="true">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><line x1="2" y1="12" x2="22" y2="12"/></svg>
-            </div>
-            <div class="family-card-body">
-              <p class="family-card-region">Bihar · Samastipur</p>
-              <h3 class="family-card-name">Tirupati Spices</h3>
-              <div class="family-card-tags"><span class="family-card-badge">Platforms 19–21</span></div>
-              <div class="family-card-address">
-                Platform 19–21, Bazar Samiti<br />
-                Samastipur — 848101
-              </div>
-            </div>
-          </div>
-        </article>
       </div>
     </div>
   </div>
@@ -1840,6 +1776,7 @@ footer {
         <span class="section-label light">Get In Touch</span>
         <h2 class="section-title light">Let's Talk<br>Business</h2>
         <p class="section-sub light">Reach out for product inquiries, export orders, custom processing, or a facility visit. Our team is ready to serve.</p>
+        <p class="section-sub light contact-ecosystem-line">Integrated presence across Uttar Pradesh and Bihar — head office and mandi operations unified under one trusted wholesale ecosystem.</p>
         <div class="contact-cards">
           <article class="contact-info-card">
             <div class="contact-card-head">
@@ -1875,13 +1812,13 @@ footer {
                 <div class="contact-icon-box" aria-hidden="true">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
                 </div>
-                <a class="contact-direct-value" href="mailto:info@spicevista.in">info@spicevista.in</a>
+                <a class="contact-direct-value" href="mailto:sales@purelal.com">sales@purelal.com</a>
               </div>
               <div class="contact-direct-row">
-                <div class="contact-icon-box" aria-hidden="true">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                <div class="contact-icon-box contact-icon-box--whatsapp" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.883 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
                 </div>
-                <a class="contact-direct-value" href="tel:+915812234567">+91 581 223 4567</a>
+                <a class="contact-direct-value" href="https://wa.me/918077976719" target="_blank" rel="noopener noreferrer">+91 80779 76719</a>
               </div>
             </div>
           </article>
@@ -1895,7 +1832,7 @@ footer {
           </div>
           <div class="form-field">
             <label>Phone Number</label>
-            <input type="tel" placeholder="+91 581 223 4567" />
+            <input type="tel" placeholder="+91 80779 76719" />
           </div>
         </div>
         <div class="form-field">
@@ -1920,6 +1857,66 @@ footer {
           <textarea placeholder="Tell us about your requirements, quantities, and timeline..."></textarea>
         </div>
         <button class="btn btn-primary" style="width:100%; padding: 16px;" onclick="handleFormSubmit(event)">Send Inquiry</button>
+      </div>
+    </div>
+    <div class="contact-family-block fade-up">
+      <div class="contact-family-head">
+        <span class="section-label light">Purelal Family</span>
+        <p class="contact-family-intro">Head office in Bareilly and mandi partners across Bihar — one wholesale network.</p>
+      </div>
+      <div class="family-grid">
+        <article class="family-card family-card--ho fade-up fade-up-delay-1">
+          <div class="family-card-sheen" aria-hidden="true"></div>
+          <div class="family-card-inner">
+            <div class="family-card-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/><path d="M10 18h4"/></svg>
+            </div>
+            <div class="family-card-body">
+              <p class="family-card-region">Uttar Pradesh · Bareilly</p>
+              <h3 class="family-card-name">SpiceVista Corporation (H.O)</h3>
+              <div class="family-card-tags"><span class="family-card-badge">Head Office</span></div>
+              <div class="family-card-address">
+                Gata 95, 96 &amp; 97<br />
+                Karanpur, Ilaka Shankarpur<br />
+                Tehsil Faridpur, Bareilly · 243123
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="family-card family-card--bihar fade-up fade-up-delay-2">
+          <div class="family-card-sheen" aria-hidden="true"></div>
+          <div class="family-card-inner">
+            <div class="family-card-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+            </div>
+            <div class="family-card-body">
+              <p class="family-card-region">Bihar · Samastipur</p>
+              <h3 class="family-card-name">AK Enterprises</h3>
+              <div class="family-card-tags"><span class="family-card-badge">Bazar Samiti</span></div>
+              <div class="family-card-address">
+                SG 50 &amp; 52, Bazar Samiti<br />
+                Samastipur — 848101
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="family-card family-card--bihar fade-up fade-up-delay-3">
+          <div class="family-card-sheen" aria-hidden="true"></div>
+          <div class="family-card-inner">
+            <div class="family-card-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><line x1="2" y1="12" x2="22" y2="12"/></svg>
+            </div>
+            <div class="family-card-body">
+              <p class="family-card-region">Bihar · Samastipur</p>
+              <h3 class="family-card-name">Tirupati Spices</h3>
+              <div class="family-card-tags"><span class="family-card-badge">Platforms 19–21</span></div>
+              <div class="family-card-address">
+                Platform 19–21, Bazar Samiti<br />
+                Samastipur — 848101
+              </div>
+            </div>
+          </div>
+        </article>
       </div>
     </div>
   </div>
